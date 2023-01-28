@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import BlogCard from "../../components/BlogCard";
 
 const Home = () => {
-    return <div>Home</div>;
+    return (
+        <div>
+            <BlogCard />
+        </div>
+    );
 };
 
 export default Home;

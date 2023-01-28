@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const linkStyle = "font-semibold hover:text-gray-500 transition";
 const Navbar = () => {
     return (
         <nav className="bg-gray-300 ">
@@ -8,13 +9,14 @@ const Navbar = () => {
                 {/* logo  */}
                 <h1 className="text-4xl font-bold">Bloggers</h1>
                 {/* primary nav */}
-
                 <div className=" ">
                     {/* <div href="/">Reading History</div> */}
-                    <Link to="/" className="mr-5 ">
+                    <Link to="/" className={`mr-4 ${linkStyle}`}>
                         Home
                     </Link>
-                    <Link to="/history">Reading History</Link>
+                    <Link to="/history" className={`${linkStyle}`}>
+                        Reading History
+                    </Link>
                 </div>
             </div>
         </nav>
