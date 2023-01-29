@@ -10,7 +10,11 @@ module.exports = {
             xl: "1280px",
             "2xl": "1536px",
         },
-        extend: {},
+        extend: {
+            fontSize: {
+                xxs: ".625rem",
+            },
+        },
     },
     plugins: [require("tailwindcss-debug-screens")],
 };
