@@ -9,7 +9,7 @@ const Home = () => {
             .then((data) => setData(data));
     }, []);
     return (
-        <div className="mx-auto max-w-7xl mt-10 grid grid-cols-3 gap-5 p-4">
+        <div className="mx-auto max-w-7xl mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 p-4">
             {data.map((blog) => (
                 <BlogCard blog={blog} />
             ))}
