@@ -5,11 +5,7 @@ const BlogCard = ({ blog }) => {
     const tags = blog.blog.tags;
     console.log(blog.blog.tags);
     // console.log(data);
-    // ${tag === "Science" && "bg-blue-700"}
-    // let bgColor;
-    // tags.map((tag) => {
-    //     console.log(tag);
-    // });
+
     return (
         <div className={`border rounded-lg overflow-hidden  `}>
             <Link to={`/blog/${blog.blog.title}`}>

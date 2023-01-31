@@ -10,11 +10,11 @@ const routes = createBrowserRouter([
         element: <Main />,
         children: [
             {
-                path: "/",
+                path: "/blogs",
                 element: <Home />,
             },
             {
-                path: "/history",
+                path: "/blogs/history",
                 element: <ReadingHistory />,
             },
             {

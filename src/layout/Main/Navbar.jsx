@@ -11,10 +11,10 @@ const Navbar = () => {
                 {/* primary nav */}
                 <div className=" ">
                     {/* <div href="/">Reading History</div> */}
-                    <Link to="/" className={`mr-4 ${linkStyle}`}>
+                    <Link to="/blogs" className={`mr-4 ${linkStyle}`}>
                         Home
                     </Link>
-                    <Link to="/history" className={`${linkStyle}`}>
+                    <Link to="/blogs/history" className={`${linkStyle}`}>
                         Reading History
                     </Link>
                 </div>
