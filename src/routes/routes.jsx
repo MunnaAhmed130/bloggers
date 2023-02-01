@@ -18,7 +18,7 @@ const routes = createBrowserRouter([
                 element: <ReadingHistory />,
             },
             {
-                path: "/blog/:id",
+                path: "/blog/:title",
                 element: <Blog />,
             },
         ],
