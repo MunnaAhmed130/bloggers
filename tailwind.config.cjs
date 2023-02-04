@@ -14,6 +14,9 @@ module.exports = {
             fontSize: {
                 xxs: ".625rem",
             },
+            fontFamily: {
+                "serif-pro": ["Source Serif Pro", "Georgia", "Cambria"],
+            },
         },
     },
     plugins: [require("tailwindcss-debug-screens")],

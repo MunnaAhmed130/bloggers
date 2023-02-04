@@ -36,10 +36,20 @@ const Blog = () => {
                 {data
                     .filter((blog) => blog.blog.title === text.title)
                     .map((blog) => (
-                        <div className="mx-10 my-5">
-                            <h2>{blog.blog.title}</h2>
+                        <div className="mx-20 my-7">
+                            <h2 className="font-extrabold text-[2.5rem] leading-[3rem] pb-2">
+                                {blog.blog.title}
+                            </h2>
+                            <h3 className="font-meduim text-2xl text-gray-500">
+                                {blog.blog.subtitle}
+                            </h3>
+                            <img
+                                className="my-8"
+                                src={blog.blog.image}
+                                alt=""
+                            />
                             <ReactMarkdown
-                                className={`whitespace-pre-line 
+                                className={`whitespace-pre-line font-serif-pro
                         ${
                             blog.blog.firstLetter &&
                             "first-letter:text-5xl first-letter:float-left"
