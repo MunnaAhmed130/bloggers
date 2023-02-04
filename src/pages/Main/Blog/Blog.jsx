@@ -49,13 +49,16 @@ const Blog = () => {
                                 alt=""
                             />
                             <ReactMarkdown
-                                className={`whitespace-pre-line font-serif-pro
+                                className={`whitespace-pre-line font-serif text-xl leading-9
                         ${
                             blog.blog.firstLetter &&
-                            "first-letter:text-5xl first-letter:float-left"
+                            "first-letter:text-[4.5rem] first-letter:leading-[1] first-letter:float-left first-letter:mr-2 first-letter"
                         }
                         `}
                             >
+                                {/* {blog.blog.firstLetter && (
+                                    <span>{blog.blog.firstLetter}</span>
+                                )} */}
                                 {blog.blog.description}
                             </ReactMarkdown>
                         </div>

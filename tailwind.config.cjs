@@ -15,7 +15,15 @@ module.exports = {
                 xxs: ".625rem",
             },
             fontFamily: {
-                "serif-pro": ["Source Serif Pro", "Georgia", "Cambria"],
+                serif: [
+                    "Source Serif Pro",
+                    "ui-serif",
+                    "Georgia",
+                    "Cambria",
+                    "Times New Roman",
+                    "Times",
+                    "serif",
+                ],
             },
         },
     },
