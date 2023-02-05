@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
 const BlogCard = ({ blog }) => {
     const tags = blog.blog.tags;
     console.log(blog.blog.tags);
     // console.log(data);
-
+    const desciption = blog.blog.description.slice(0, 200);
     return (
         <div className={`border rounded-lg overflow-hidden  `}>
             <Link to={`/blog/${blog.blog.title}`}>
@@ -47,10 +48,11 @@ const BlogCard = ({ blog }) => {
                         return (
                             <button
                                 className={`
-                                ${tag === "Science" && "bg-blue-600"}
-                                ${tag === "Technology" && "bg-blue-800"}
+                                ${tag === "Science" && "bg-blue-800"}
+                                ${tag === "Technology" && "bg-blue-900"}
                                 ${tag === "Health" && "bg-green-800"}
-                                ${tag === "Space" && "bg-orange-500"}
+                                ${tag === "Space" && "bg-gray-700"}
+                                ${tag === "Space Exploration" && "bg-gray-600"}
                                  text-xxs font-semibold mr-1 mt-1 px-1 py-0.5  rounded-sm text-white`}
                                 key={tag}
                                 onClick={() => console.log(tag)}
@@ -60,13 +62,17 @@ const BlogCard = ({ blog }) => {
                         );
                     })}
                 </div>
-                <p className="text-sm text-gray-500 py-2 ">
-                    {/* {blog.blog.description} */}
-                    {blog.blog.description.slice(0, 200)}...
-                    <span className="font-semibold text-gray-400">
+                <div className="font-serif">
+                    <ReactMarkdown className="text-sm first:p-0 first:inline inline text-gray-700 py-2   mt-1">
+                        {/* {blog.blog.description} */}
+                        {/* {blog.blog.description.slice(0, 200)}... */}
+                        {desciption}
+                    </ReactMarkdown>
+                    <span className="font-medium text-sm text-gray-400 inline">
                         see more
                     </span>
-                </p>
+                </div>
+
                 {/* <button>See more</button> */}
             </div>
 

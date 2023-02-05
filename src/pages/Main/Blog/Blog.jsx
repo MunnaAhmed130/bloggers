@@ -49,7 +49,7 @@ const Blog = () => {
                                 alt=""
                             />
                             <ReactMarkdown
-                                className={`whitespace-pre-line font-serif text-xl leading-9
+                                className={`whitespace-pre-line font-serif text-xl leading-9 description
                         ${
                             blog.blog.firstLetter &&
                             "first-letter:text-[4.5rem] first-letter:leading-[1] first-letter:float-left first-letter:mr-2 first-letter"

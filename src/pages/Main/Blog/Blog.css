@@ -9,3 +9,7 @@ img[alt="svg"] {
     object-fit: cover;
     object-position: top 5px;
 }
+
+.description a {
+    text-decoration: underline;
+}
