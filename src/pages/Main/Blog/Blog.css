@@ -10,6 +10,6 @@ img[alt="svg"] {
     object-position: top 5px;
 }
 
-.description a {
+:is(.description, figcaption) a {
     text-decoration: underline;
 }

@@ -36,18 +36,26 @@ const Blog = () => {
                 {data
                     .filter((blog) => blog.blog.title === text.title)
                     .map((blog) => (
-                        <div className="mx-20 my-7">
-                            <h2 className="font-extrabold text-[2.5rem] leading-[3rem] pb-2">
+                        <div className="mx-20 my-7 font-sans ">
+                            <h2 className="font-bold tracking-tight text-[32px] leading-[3rem] pb-2">
                                 {blog.blog.title}
                             </h2>
-                            <h3 className="font-meduim text-2xl text-gray-500">
+                            <h3 className=" tracking-tight text-2xl text-gray-500">
                                 {blog.blog.subtitle}
                             </h3>
-                            <img
-                                className="my-8"
-                                src={blog.blog.image}
-                                alt=""
-                            />
+                            <figure className="my-8">
+                                <img
+                                    className=""
+                                    src={blog.blog.image}
+                                    alt=""
+                                />
+                                <figcaption className="">
+                                    <ReactMarkdown className="text-center text-[14px]  text-gray-500 mt-3">
+                                        {blog.blog.imageCaption}
+                                    </ReactMarkdown>
+                                </figcaption>
+                            </figure>
+
                             <ReactMarkdown
                                 className={`whitespace-pre-line font-serif text-xl leading-9 description
                         ${

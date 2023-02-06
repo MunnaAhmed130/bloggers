@@ -15,6 +15,7 @@ module.exports = {
                 xxs: ".625rem",
             },
             fontFamily: {
+                // sans: ["Roboto", "Helvetica Neue", "Arial", "Noto Sans"],
                 serif: [
                     "Source Serif Pro",
                     "ui-serif",

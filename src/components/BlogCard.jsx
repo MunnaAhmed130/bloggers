@@ -6,9 +6,12 @@ const BlogCard = ({ blog }) => {
     const tags = blog.blog.tags;
     console.log(blog.blog.tags);
     // console.log(data);
-    const desciption = blog.blog.description.slice(0, 200);
+    const desciption = ` ${blog.blog.description.slice(
+        0,
+        200
+    )} ... **see more**`;
     return (
-        <div className={`border rounded-lg overflow-hidden  `}>
+        <div className={`border rounded-lg overflow-hidden`}>
             <Link to={`/blog/${blog.blog.title}`}>
                 <img
                     className="h-48 w-full bg-cover border-0"
@@ -16,10 +19,8 @@ const BlogCard = ({ blog }) => {
                     alt=""
                 />
             </Link>
-            {/* <div className=""> */}
-
             <div className="px-3">
-                <div className="flex items-center gap-5 pt-3 ">
+                <div className="flex items-center gap-5 pt-3">
                     {/* <img
                         className="h-10 w-10 rounded-full"
                         src={blog.author.image}
@@ -63,20 +64,11 @@ const BlogCard = ({ blog }) => {
                     })}
                 </div>
                 <div className="font-serif">
-                    <ReactMarkdown className="text-sm first:p-0 first:inline inline text-gray-700 py-2   mt-1">
-                        {/* {blog.blog.description} */}
-                        {/* {blog.blog.description.slice(0, 200)}... */}
+                    <ReactMarkdown className="text-sm   text-gray-700 py-2   m-1">
                         {desciption}
                     </ReactMarkdown>
-                    <span className="font-medium text-sm text-gray-400 inline">
-                        see more
-                    </span>
                 </div>
-
-                {/* <button>See more</button> */}
             </div>
-
-            {/* </div> */}
         </div>
     );
 };
