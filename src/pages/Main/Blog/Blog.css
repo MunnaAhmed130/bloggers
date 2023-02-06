@@ -1,13 +1,5 @@
-img[alt="svg"] {
-    /* width: 1000px; */
-    /* display: inline-block; */
-    padding-inline: 3rem;
-    /* margin-block: 1rem; */
-    /* height: 200px; */
-    background-color: rgb(225, 225, 225);
-    width: 100%;
-    object-fit: cover;
-    object-position: top 5px;
+.description img {
+    margin-inline: auto;
 }
 
 :is(.description, figcaption) a {

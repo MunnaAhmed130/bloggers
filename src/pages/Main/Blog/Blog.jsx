@@ -11,28 +11,51 @@ const Blog = () => {
     console.log(data);
     console.log(text);
     return (
-        <div className="grid grid-cols-3 max-w-7xl mx-auto">
-            <div className="col-span-2">
-                {/* {data
-                    .filter((blog) => blog.blog.title === text.title)
-                    .map((blog) => (
-                        <div>
-                            {blog.blog.description.map((description) => (
-                                <p
-                                    className={`whitespace-pre-line mx-10 my-5
-                        ${
-                            blog.blog.firstLetter &&
-                            "first-letter:text-5xl first-letter:float-left"
-                        }
-                        `}
+        <div>
+            {data
+                .filter((blog) => blog.blog.title === text.title)
+                .map((blog) => (
+                    <div className="grid grid-cols-3 max-w-7xl mx-auto">
+                        <div className="col-span-2">
+                            <div className="mx-20 my-7 font-sans ">
+                                <h2 className="font-bold tracking-tight text-[32px] leading-[3rem] pb-2">
+                                    {blog.blog.title}
+                                </h2>
+                                <h3 className=" tracking-tight text-2xl text-gray-500">
+                                    {blog.blog.subtitle}
+                                </h3>
+                                <figure className="my-8">
+                                    <img
+                                        className=""
+                                        src={blog.blog.image}
+                                        alt="title image"
+                                    />
+                                    <figcaption className="">
+                                        <ReactMarkdown className="text-center text-[14px]  text-gray-500 mt-3">
+                                            {blog.blog.imageCaption}
+                                        </ReactMarkdown>
+                                    </figcaption>
+                                </figure>
+
+                                <ReactMarkdown
+                                    className={`whitespace-pre-line font-serif text-xl leading-9 description
+                                    ${
+                                        blog.blog.firstLetter &&
+                                        "first-letter:text-[4.5rem] first-letter:leading-[1] first-letter:float-left first-letter:mr-2 first-letter"
+                                    }
+                                    `}
                                 >
-                                    {description}
-                                </p>
-                            ))}
+                                    {/* {blog.blog.firstLetter && (
+                                        <span>{blog.blog.firstLetter}</span>
+                                    )} */}
+                                    {blog.blog.description}
+                                </ReactMarkdown>
+                            </div>
                         </div>
-                    
-                    ) )
-                    } */}
+                        <div className="col-span-1"></div>
+                    </div>
+                ))}
+            {/* <div className="col-span-2">
                 {data
                     .filter((blog) => blog.blog.title === text.title)
                     .map((blog) => (
@@ -64,15 +87,17 @@ const Blog = () => {
                         }
                         `}
                             >
-                                {/* {blog.blog.firstLetter && (
+                                {blog.blog.firstLetter && (
                                     <span>{blog.blog.firstLetter}</span>
-                                )} */}
+                                )}
                                 {blog.blog.description}
                             </ReactMarkdown>
                         </div>
                     ))}
             </div>
-            <div className="col-span-1">sidebar</div>
+            <div className="col-span-1">
+                
+            </div> */}
         </div>
     );
 };
