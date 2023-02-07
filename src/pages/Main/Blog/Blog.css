@@ -2,6 +2,13 @@
     margin-inline: auto;
 }
 
+.description p {
+    font-size: 1.25rem;
+}
+
+.description code {
+    font-size: 1rem;
+}
 :is(.description, figcaption) a {
     text-decoration: underline;
 }
