@@ -4,17 +4,9 @@ import rehypeHighlight from "rehype-highlight";
 
 const BlogInfo = ({ blog }) => {
     const description = blog.description;
-    // const description = `~~~py
-    // #Translate the following function from Python to R:
-    // def get_stats(event_name):
-    //     df_stats = df[df['event_name']==event_name]
-    //     stats = df_stats['player_id']
-    //     stats = stats.value_counts()
-    //     return statsdf_stats = df[df['event_name']==event_name]
-    //     `;
-    // console.log(description);
+
     return (
-        <div className="mx-20 my-7 font-sans ">
+        <div className="px-20 py-7 font-sans border-r ">
             <h2 className="font-bold tracking-tight text-[32px] leading-[3rem] pb-2">
                 {blog.title}
             </h2>
