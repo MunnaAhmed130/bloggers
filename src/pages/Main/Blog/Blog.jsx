@@ -11,17 +11,7 @@ const Blog = () => {
     const data = useData();
     console.log(data);
     console.log(text);
-    // const description = blog.blog.description;
-    // const description = `{
-    //     ```js
-    //  #Translate the following function from Python to R:
-    // def get_stats(event_name):
-    //     df_stats = df[df['event_name']==event_name]
-    //     stats = df_stats['player_id']
-    //     stats = stats.value_counts()
-    //     return statsdf_stats = df[df[‘event_name’]==event_name]
-    //     ```}`;
-    // console.log(description);
+
     return (
         // <div>
         <div className="grid grid-cols-3 max-w-7xl mx-auto">

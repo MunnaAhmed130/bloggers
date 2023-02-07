@@ -3,6 +3,16 @@ import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 
 const BlogInfo = ({ blog }) => {
+    const description = blog.blog.description;
+    // const description = `~~~py
+    // #Translate the following function from Python to R:
+    // def get_stats(event_name):
+    //     df_stats = df[df['event_name']==event_name]
+    //     stats = df_stats['player_id']
+    //     stats = stats.value_counts()
+    //     return statsdf_stats = df[df['event_name']==event_name]
+    //     `;
+    // console.log(description);
     return (
         <div className="mx-20 my-7 font-sans ">
             <h2 className="font-bold tracking-tight text-[32px] leading-[3rem] pb-2">
@@ -20,6 +30,7 @@ const BlogInfo = ({ blog }) => {
                 </figcaption>
             </figure>
             <ReactMarkdown
+                children={description}
                 rehypePlugins={[rehypeHighlight]}
                 className={`whitespace-pre-line font-serif leading-9 description
             ${
@@ -31,7 +42,7 @@ const BlogInfo = ({ blog }) => {
                 {/* {blog.blog.firstLetter && (
                 <span>{blog.blog.firstLetter}</span>
             )} */}
-                {blog.blog.description}
+                {/* {blog.blog.description} */}
             </ReactMarkdown>
         </div>
     );
