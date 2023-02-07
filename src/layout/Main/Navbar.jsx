@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const linkStyle = "text-black- hover:text-gray-500 transition";
+const linkStyle = "hover:text-black text-gray-500 transition";
 const Navbar = () => {
     return (
         <nav className=" border">
