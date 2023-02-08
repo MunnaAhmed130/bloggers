@@ -4,9 +4,9 @@ import { ImLink } from "react-icons/im";
 import { RxEnvelopeClosed } from "react-icons/rx";
 
 const AuthorInfo = ({ author }) => {
-    const iconStyle = "mr-3";
+    const iconStyle = "mr-3.5";
     return (
-        <div className=" mx-10 py-10 font-sans sticky top-0">
+        <div className=" mx-8 py-10 font-sans sticky top-0">
             <div className="flex">
                 <img
                     src={author.image}

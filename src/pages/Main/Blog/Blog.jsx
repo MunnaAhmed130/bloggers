@@ -13,15 +13,15 @@ const Blog = () => {
     console.log(text);
 
     return (
-        <div className="max-w-7xl">
+        <div className="max-w-7xl mx-auto">
             {data
                 .filter((blog) => blog.blog.title === text.title)
                 .map((blog) => (
-                    <div className="grid lg:grid-cols-3 justify-evenly   ">
-                        <div className="col-span-2 lg:border-r mx-auto">
+                    <div className="flex justify-evenly   ">
+                        <div className="max-w-2xl  mx-6 ">
                             <BlogInfo blog={blog.blog} />
                         </div>
-                        <div className="col-span-1 hidden lg:block">
+                        <div className="max-w-sm hidden lg:block border-l">
                             <AuthorInfo author={blog.author} />
                         </div>
                     </div>

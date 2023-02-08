@@ -5,14 +5,14 @@ import style from "../../style";
 const linkStyle = "hover:text-black text-gray-500 transition";
 const Navbar = () => {
     return (
-        <nav className=" border">
+        <nav className=" border-b">
             <div
                 className={`flex justify-between items-center  ${style.containerPadding} py-3`}
             >
                 {/* logo */}
                 <h1 className="sm:text-4xl text-[32px] font-bold">Bloggers</h1>
                 {/* primary nav */}
-                <div className=" ">
+                <div className=" flex">
                     {/* <div href="/">Reading History</div> */}
                     <Link to="/home" className={`mr-4 ${linkStyle}`}>
                         Home

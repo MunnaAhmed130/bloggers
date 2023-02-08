@@ -2,15 +2,12 @@
     margin-inline: auto;
 }
 
-.blog-container {
-}
-
 .description code {
     font-size: 0.875rem;
     display: inline-block;
     /* line-height: 1px; */
 }
 
-:is(.description, figcaption) a {
+:is(.description, figcaption, .end--comment) a {
     text-decoration: underline;
 }
