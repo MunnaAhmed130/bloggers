@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import style from "../../style";
 
 const linkStyle = "hover:text-black text-gray-500 transition";
 const Navbar = () => {
     return (
         <nav className=" border">
-            <div className="flex justify-between items-center  px-10 py-3">
+            <div
+                className={`flex justify-between items-center  ${style.containerPadding} py-3`}
+            >
                 {/* logo */}
-                <h1 className="text-4xl font-bold">Bloggers</h1>
+                <h1 className="sm:text-4xl text-[32px] font-bold">Bloggers</h1>
                 {/* primary nav */}
                 <div className=" ">
                     {/* <div href="/">Reading History</div> */}
