@@ -1,5 +1,5 @@
 const style = {
-    containerPadding: "px-5 xs:px-10",
+    containerPadding: " sm:px-10 ml:px-6 px-5",
 };
 
 export default style;

@@ -12,12 +12,10 @@ const BlogInfo = ({ blog }) => {
     const subtitle = "tracking-tight sm:text-2xl text-xl  text-gray-500";
 
     const firstLetterStyle =
-        "first-letter:text-[4.5rem] first-letter:leading-[1] first-letter:float-left first-letter:mr-2 first-letter";
+        "first-letter:text-[4.5rem] first-letter:leading-[1] first-letter:float-left first-letter:mr-2 ";
 
     return (
-        <div
-            className={`${style.containerPadding} xl:mr-16 py-7 font-sans max-w-3xl w-xl`}
-        >
+        <div className={` blog__container  py-7 font-sans max-w-2xl w-xl `}>
             <h2 className={title}>{blog.title}</h2>
             <h3 className={subtitle}>{blog.subtitle}</h3>
             <figure className="my-8">
@@ -31,7 +29,7 @@ const BlogInfo = ({ blog }) => {
             <ReactMarkdown
                 children={description}
                 rehypePlugins={[rehypeHighlight]}
-                className={`whitespace-pre-line font-serif leading-9 description ${
+                className={`whitespace-pre-line font-serif sm:leading-9 sm:text-xl text-lg description ${
                     blog.firstLetter && `${firstLetterStyle}`
                 }`}
             />
