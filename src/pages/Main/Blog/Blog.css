@@ -8,6 +8,6 @@
     /* line-height: 1px; */
 }
 
-:is(.description, figcaption, .end--comment) a {
+:is(.description, .about, figcaption, .end--comment) a {
     text-decoration: underline;
 }

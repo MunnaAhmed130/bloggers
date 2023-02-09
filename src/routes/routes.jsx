@@ -18,6 +18,10 @@ const routes = createBrowserRouter([
                 element: <Home />,
             },
             {
+                path: "/addBlog",
+                element: <AddBlog />,
+            },
+            {
                 path: "/history",
                 element: <ReadingHistory />,
             },

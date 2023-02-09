@@ -5,7 +5,8 @@ import { BsDot } from "react-icons/bs";
 import style from "../style";
 
 const BlogInfo = ({ blog }) => {
-    const description = blog.description;
+    // const description = blog.description;
+    const description = {};
 
     const title =
         "font-bold tracking-tight sm:text-[32px] text-3xl sm:leading-10 leading-10 pb-2 ";
@@ -27,6 +28,7 @@ const BlogInfo = ({ blog }) => {
                     </ReactMarkdown>
                 </figcaption>
             </figure>
+            {/* <div markdown="1">{description}</div> */}
             <ReactMarkdown
                 children={description}
                 rehypePlugins={[rehypeHighlight]}
