@@ -52,7 +52,7 @@ const BlogCard = ({ blog }) => {
                     {tags.map((tag) => {
                         return (
                             <button
-                                className={` text-xs font-medium mr-1 mt-1 px-2 py-1  rounded-full text-black font-semibold bg-gray-300 `}
+                                className={`text-xs mr-1 mt-1 px-2 py-1  rounded-full text-black font-semibold bg-gray-300 `}
                                 key={tag}
                                 onClick={() => console.log(tag)}
                             >

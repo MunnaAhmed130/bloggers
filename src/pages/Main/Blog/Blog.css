@@ -11,3 +11,7 @@
 :is(.description, .about, figcaption, .end--comment) a {
     text-decoration: underline;
 }
+
+em {
+    font-style: italic;
+}
