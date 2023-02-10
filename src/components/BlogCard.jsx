@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 
 const BlogCard = ({ blog }) => {
     const tags = blog.blog.tags;
-    console.log(blog.blog.tags);
+    // console.log(blog.blog.tags);
     // console.log(data);
     const desciption = ` ${blog.blog.description.slice(
         0,
@@ -15,7 +15,7 @@ const BlogCard = ({ blog }) => {
     // [![IMAGE ALT TEXT HERE](https://miro.medium.com/max/720/1*HpjP8_3UEIB3ePU3f3ssaA.webp)](https://youtu.be/C4wm-p_VFh0)
     return (
         <div>
-            <div className={`border overflow-hidden`}>
+            <div className={`border rounded-md overflow-hidden`}>
                 <Link to={`/blog/${blog.blog.title}`}>
                     <img
                         className="h-52 w-full  border-0"
@@ -23,7 +23,7 @@ const BlogCard = ({ blog }) => {
                         alt=""
                     />
                 </Link>
-                <div className="px-3 py-3 flex">
+                <div className="px-3 pt-3 pb-2 flex">
                     <div>
                         <img
                             className="w-14 h-14 rounded-full bg-gray-200"
@@ -52,7 +52,7 @@ const BlogCard = ({ blog }) => {
                     {tags.map((tag) => {
                         return (
                             <button
-                                className={` text-xxs font-medium mr-1 mt-1 px-2 py-1  rounded-full text-white bg-gray-300 `}
+                                className={` text-xs font-medium mr-1 mt-1 px-2 py-1  rounded-full text-black font-semibold bg-gray-300 `}
                                 key={tag}
                                 onClick={() => console.log(tag)}
                             >
@@ -69,7 +69,7 @@ const BlogCard = ({ blog }) => {
                         alt=""
                     /> */}
                         <div className="flex flex-col">
-                            <Link to="">
+                            <Link to={`/blog/${blog.blog.title}`}>
                                 <h2 className="text-xl font-semibold">
                                     {blog.blog.title}
                                 </h2>
