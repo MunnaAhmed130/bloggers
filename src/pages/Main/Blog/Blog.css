@@ -12,6 +12,6 @@
     text-decoration: underline;
 }
 
-em {
-    font-style: italic;
+strong {
+    font-weight: 600;
 }
