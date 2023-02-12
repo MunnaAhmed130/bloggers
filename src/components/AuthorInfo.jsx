@@ -5,24 +5,25 @@ import { RxEnvelopeClosed } from "react-icons/rx";
 import ReactMarkdown from "react-markdown";
 
 const AuthorInfo = ({ author }) => {
+    console.log(author?.names);
     const iconStyle = "mr-2 py-1.5 px-1";
     const footerLink = "text-gray-500 hover:text-gray-700 mr-1";
     return (
         <div className=" mx-8 py-10 font-sans  top-0 relative">
             <div className="flex">
                 <img
-                    src={author.image}
+                    src={author?.image}
                     className="border rounded-full w-24"
                     alt=""
                 />
                 <div className="pl-5  w-full flex flex-col justify-center">
-                    <h2 className="font-medium text-lg">{author.name}</h2>
+                    <h2 className="font-medium text-lg">{author?.name}</h2>
                     <span>
                         <a
                             href="/"
                             className="text-gray-400 hover:text-gray-500"
                         >
-                            {author.followersCount} followers
+                            {author?.followersCount} followers
                         </a>
                     </span>
 
@@ -47,7 +48,7 @@ const AuthorInfo = ({ author }) => {
             </div>
 
             <ReactMarkdown
-                children={author.about}
+                children={author?.about}
                 className="about mt-5 text-gray-500 text-sm leading-6"
             />
             <div className="flex mt-5">

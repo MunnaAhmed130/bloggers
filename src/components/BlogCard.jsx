@@ -8,7 +8,10 @@ const BlogCard = ({ blog }) => {
     const tags = blog.blog.tags;
     // console.log(blog.blog.tags);
     // console.log(data);
-    const desciption = ` ${blog.blog.description.slice(0, 120)}  ... `;
+    let description;
+    blog.blog.description
+        ? (description = ` ${blog.blog.description.slice(0, 120)}  ... `)
+        : (description = "description");
 
     // [![IMAGE ALT TEXT HERE](https://miro.medium.com/max/720/1*HpjP8_3UEIB3ePU3f3ssaA.webp)](https://youtu.be/C4wm-p_VFh0)
     return (
@@ -47,17 +50,18 @@ const BlogCard = ({ blog }) => {
                     </div>
                 </div>
                 <div className="pl-3">
-                    {tags.map((tag) => {
-                        return (
-                            <button
-                                className={`text-xs mr-2 mt-1 px-2 py-1  rounded-full text-black font-semibold bg-gray-300 `}
-                                key={tag}
-                                onClick={() => console.log(tag)}
-                            >
-                                {tag}
-                            </button>
-                        );
-                    })}
+                    {tags &&
+                        tags.map((tag) => {
+                            return (
+                                <button
+                                    className={`text-xs mr-2 mt-1 px-2 py-1  rounded-full text-black font-semibold bg-gray-300 `}
+                                    key={tag}
+                                    onClick={() => console.log(tag)}
+                                >
+                                    {tag}
+                                </button>
+                            );
+                        })}
                 </div>
                 <div className="px-3 py-2">
                     <div className="flex items-center gap-5 font-sans">
@@ -107,7 +111,7 @@ const BlogCard = ({ blog }) => {
                         )}
                         {!blog.blog.subtitle && (
                             <ReactMarkdown className="text-lg   text-gray-700 py-2   ">
-                                {desciption}
+                                {description}
                             </ReactMarkdown>
                         )}
                     </div>

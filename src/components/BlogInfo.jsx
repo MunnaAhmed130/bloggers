@@ -27,13 +27,13 @@ const BlogInfo = ({ blog }) => {
 
     return (
         <div className={` blog__container  py-7 font-sans `}>
-            <h2 className={title}>{blog.title}</h2>
-            <h3 className={subtitle}>{blog.subtitle}</h3>
+            <h2 className={title}>{blog?.title}</h2>
+            <h3 className={subtitle}>{blog?.subtitle}</h3>
             <figure className="my-8">
-                <img className="" src={blog.image} alt="title image" />
+                <img className="" src={blog?.image} alt="title image" />
                 <figcaption className="">
                     <ReactMarkdown className="text-center text-[14px]  text-gray-500 mt-3">
-                        {blog.imageCaption}
+                        {blog?.imageCaption}
                     </ReactMarkdown>
                 </figcaption>
             </figure>

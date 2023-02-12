@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { BLOG_CONTEXT } from "../../App";
+import useData from "../../Hooks/useData";
 
 const AddBlog = () => {
     const inputStyle = "border w-full mb-2 pl-4 focus:outline-none";
+    // const blogData = useData();
+    const { data, setData } = useContext(BLOG_CONTEXT);
+    console.log(data);
     const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (blog) => {
+        const blogInfo = { author: {}, blog: { ...blog } };
+        const blogs = [...data, blogInfo];
+        setData(blogs);
+        console.log(blogs);
+    };
     return (
         <div>
             <form
@@ -15,7 +25,7 @@ const AddBlog = () => {
                     type="text"
                     className={`${inputStyle} h-20 text-4xl placeholder:text-4xl leading-[5rem] `}
                     placeholder="Title"
-                    {...register("Title")}
+                    {...register("title")}
                     autoFocus
                 />
                 <textarea
