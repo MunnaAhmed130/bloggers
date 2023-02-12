@@ -3,9 +3,18 @@ import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import { BsDot } from "react-icons/bs";
 import style from "../style";
+// import styles from "../markdown.css";
+
+// const CustomParagraph = ({ children }) => (
+//     <p className="testClass">{children}</p>
+// );
 
 const BlogInfo = ({ blog }) => {
     const description = blog.description;
+    // const description = `an [example][id] co<sub>2</sub>`;
+    // const description = `~~~js
+    // var name = "World";
+    // console.warn("Hello, " + name + "!")`;
     // const description = {};
 
     const title =
@@ -30,9 +39,24 @@ const BlogInfo = ({ blog }) => {
             </figure>
             {/* <div markdown="1">{description}</div> */}
             <ReactMarkdown
+                // source="test"
+                // renderers={{
+                //     paragraph: (props) => <CustomParagraph {...props} />,
+                // }}
                 children={description}
+                // components={
+                //     {
+                //         // p({ className, children, ...props }) {
+                //         //     return (
+                //         //         <p className={className} {...props}>
+                //         //             {children.replace(/\n/g, "")}
+                //         //         </p>
+                //         //     );
+                //         // },
+                //     }
+                // }
                 rehypePlugins={[rehypeHighlight]}
-                className={`whitespace-pre-line font-serif sm:leading-[2.2rem] sm:text-xl text-lg description ${
+                className={` whitespace-pre-line font-serif sm:leading-[2.2rem] sm:text-xl text-lg description ${
                     blog.firstLetter && `${firstLetterStyle}`
                 }`}
             />

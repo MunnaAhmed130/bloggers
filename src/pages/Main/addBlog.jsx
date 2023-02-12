@@ -16,11 +16,12 @@ const AddBlog = () => {
                     className={`${inputStyle} h-20 text-4xl placeholder:text-4xl leading-[5rem] `}
                     placeholder="Title"
                     {...register("Title")}
+                    autoFocus
                 />
                 <textarea
                     type="text"
                     className={`${inputStyle} text-xl`}
-                    {...register("para")}
+                    {...register("description")}
                 />
                 <button
                     type="submit"
